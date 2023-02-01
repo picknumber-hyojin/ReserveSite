@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사전예약</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/reset.css">
+</head>
+<body>
+
+    <header>
+        <h2>모델하우스 사전예약</h2>
+        <nav class="navbar">
+            <ul>
+                <li class="active"><a href="./index.html" role="home" class="">STEP1 개인정보 입력</a></li>
+                <li><a href="./date.html">STEP2 날짜,시간선택</a></li>
+                <li><a href="">STEP3 예약완료</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="content">
+
+
+            <!-- 개인정보 수집 -->
+            <div class="personal">
+                <h3>개인정보 수집 및 이용에 관한안내</h3>
+                <div class="agree">
+                    <div class="agree_box">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas explicabo, laboriosam neque illo quis aut impedit dolore quod tempore, molestiae quisquam eum sequi cumque adipisci voluptates saepe ipsa blanditiis exercitationem.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas explicabo, laboriosam neque illo quis aut impedit dolore quod tempore, molestiae quisquam eum sequi cumque adipisci voluptates saepe ipsa blanditiis exercitationem.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas explicabo, laboriosam neque illo quis aut impedit dolore quod tempore, molestiae quisquam eum sequi cumque adipisci voluptates saepe ipsa blanditiis exercitationem.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas explicabo, laboriosam neque illo quis aut impedit dolore quod tempore, molestiae quisquam eum sequi cumque adipisci voluptates saepe ipsa blanditiis exercitationem.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas explicabo, laboriosam neque illo quis aut impedit dolore quod tempore, molestiae quisquam eum sequi cumque adipisci voluptates saepe ipsa blanditiis exercitationem.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas explicabo, laboriosam neque illo quis aut impedit dolore quod tempore, molestiae quisquam eum sequi cumque adipisci voluptates saepe ipsa blanditiis exercitationem.
+                        </p>
+                    </div>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="agree">
+                    <label for="agree">개인정보 이용약관에 동의합니다.</label>
+                </div>
+            </div>
+
+            <!-- 예약자 정보 입력 -->
+            <div class="subscriber">
+                <h3>예약자 정보 입력</h3>
+                <div class="subscriber_contain">
+                    <div class="subscriber_wrap">
+                        <h4>이름</h4>
+                        <div class="subscriber_input">
+                            <labael>
+                                <input type="text" name="name">
+                            </labael>
+                        </div>
+
+                        
+                    </div>
+                    <div class="subscriber_wrap">
+                        <h4>생년월일</h4>
+                        <div class="subscriber_input">
+                            <label>
+                                <input type="number" maxlength="4" oninput="maxLengthCheck(this)" name="birthday">
+                            </label>
+                            <span>* 생년월일 6자리를 입력해주세요.</span>
+                        </div>
+
+                    </div>
+                    <div class="subscriber_wrap">
+                        <h4>거주지</h4>
+                        <div class="subscriber_input">
+                            <select>
+                                <option value="">선택</option>
+                                <option value="">서울</option>
+                                <option value="">경기</option>
+                                <option value="">인천</option>
+                                <option value="">강원</option>
+                                <option value="">부산</option>
+                                <option value="">울산</option>
+                                <option value="">충남</option>
+                                <option value="">충북</option>
+                                <option value="">광주</option>
+                                <option value="">전남</option>
+                                <option value="">전북</option>
+                                <option value="">경남</option>
+                                <option value="">경북</option>
+                                <option value="">제주</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="subscriber_wrap">
+                        <h4>선호타입</h4>
+                        <div class="subscriber_input">
+                            <ul class="favor_type">
+                                <li>                    
+                                    <input id="type1" type="checkbox">
+                                    <label for="type1">A</label>
+                                </li>
+                                <li>                    
+                                    <input id="type2" type="checkbox">
+                                    <label for="type2">B</label>
+                                </li>
+                                <li>                    
+                                    <input id="type3" type="checkbox">
+                                    <label for="type3">C</label>
+                                </li>
+                            </ul>
+                        </div>
+                        
+    
+                    </div>
+                    <div class="subscriber_wrap phone_input">
+                        <h4>휴대폰번호</h4>
+                        <div class="subscriber_input">
+                            <div class="tel_input">
+                                <input type="tel" name="tel">
+                                <button type="button" class="btn checkbtn">
+                                    인증번호 받기
+                                </button>
+                            </div>
+                            <div class="certification">
+                                <input type="number">
+                                <button type="button" class="btn checkbtn">
+                                    인증번호 받기
+                                </button>
+                            </div>
+
+                        </div>
+
+    
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="button_wrap">
+            <button type="button" class="btn cancle">이전</button>
+            <button type="button" onclick="location.href='./date.html'" class="btn submit">다음</button>
+        </div>
+    </section>
+
+
+    <script>
+        function maxLengthCheck(object){
+            if (object.value.length > object.maxLength){
+            object.value = object.value.slice(0, object.maxLength);
+            }    
+        }
+    </script>
+    
+</body>
+</html>
